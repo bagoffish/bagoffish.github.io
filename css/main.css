@@ -1,10 +1,9 @@
-/* === Base Page Styles === */
 body {
     background-color: #000000;
     margin: 0;
     padding: 0;
     min-height: 100vh;
-    overflow-y: auto;  /* ensures scrolling */
+    overflow-y: auto;
     font-family: Arial, sans-serif;
 }
 
@@ -57,16 +56,14 @@ a:hover {
     color: white;
 }
 
-/* === Content Container (Centered & Flexible) === */
 .content {
     max-width: 800px;
-    margin: 40px auto;  /* vertical spacing and horizontal centering */
+    margin: 40px auto;
     padding: 0 20px;
     text-align: center;
     box-sizing: border-box;
 }
 
-/* Center text elements */
 .center {
     text-align: center;
 }
@@ -75,7 +72,6 @@ a:hover {
     font-size: 50px;
 }
 
-/* === Page Buttons Flexbox (Centered) === */
 .page-buttons {
     display: flex;
     justify-content: center;
@@ -84,7 +80,6 @@ a:hover {
     flex-wrap: wrap;
 }
 
-/* === Comment Section (Centered) === */
 .comment-section {
     margin-top: 40px;
     background: #111;
@@ -95,11 +90,10 @@ a:hover {
     width: 500px;
     max-width: 90%;
     margin-left: auto;
-    margin-right: auto;       /* centers the comment section */
+    margin-right: auto;
     box-sizing: border-box;
 }
 
-/* Center Giscus iframe */
 #giscus_container {
     display: flex;
     justify-content: center;
@@ -108,7 +102,6 @@ a:hover {
     overflow: auto;
 }
 
-/* Each individual comment */
 .comment {
     background: #1c1c1c;
     padding: 10px;
@@ -122,7 +115,6 @@ a:hover {
     color: #b8b8b8;
 }
 
-/* Comment form inputs */
 .comment-form input,
 .comment-form textarea {
     font-family: Arial, sans-serif;
@@ -135,7 +127,6 @@ a:hover {
     box-sizing: border-box;
 }
 
-/* Textarea locked from manual resizing */
 .comment-form textarea {
     width: 100%;
     min-height: 90px;
@@ -146,7 +137,6 @@ a:hover {
     line-height: 1.4;
 }
 
-/* Form buttons */
 .comment-form button {
     background: #1c1c1c;
     border: none;
@@ -162,7 +152,6 @@ a:hover {
     background: #333;
 }
 
-/* Delete button inside each comment */
 .comment button.delete-btn {
     background: #800000;
     border: none;
@@ -178,7 +167,6 @@ a:hover {
     background: #a00000;
 }
 
-/* === Responsive Improvements === */
 @media (max-width: 600px) {
     .pagebutton {
         padding: 10px 20px;
