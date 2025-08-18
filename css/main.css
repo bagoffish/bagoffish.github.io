@@ -12,6 +12,8 @@ pre {
     font-family: monospace;
     font-size: 13px;
     line-height: 14pt;
+    white-space: pre-wrap;
+    word-break: break-word;
 }
 
 hr {
@@ -34,6 +36,7 @@ a:hover {
     color: #ffffff;
     font-family: monospace;
     line-height: 10pt;
+    text-align: center;
 }
 
 .pagebutton {
@@ -49,6 +52,7 @@ a:hover {
     font-family: Arial, sans-serif;
     border-radius: 6px;
     transition: background-color 0.3s;
+    cursor: pointer;
 }
 
 .pagebutton:hover {
