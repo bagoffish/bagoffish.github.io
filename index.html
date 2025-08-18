@@ -9,18 +9,20 @@
 
   <!-- Open Graph Meta Tags -->
   <meta property="og:title" content="bag of fish">
-  <meta property="og:image" content="https://bagof.fish/images/image05.gif?v=1">
+  <meta property="og:image" content="https://bagof.fish/images/image05.png"> <!-- static fallback -->
   <meta property="og:url" content="https://bagof.fish">
   <meta property="og:type" content="website">
 
   <!-- Twitter Card Meta Tags -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="bag of fish">
-  <meta name="twitter:image" content="https://bagof.fish/images/image05.gif?v=1">
+  <meta name="twitter:image" content="https://bagof.fish/images/image05.png"> <!-- static fallback -->
   <meta name="twitter:url" content="https://bagof.fish">
 </head>
 <body>
-  <div class="content">
+  <div class="content" style="text-align: center;">
+
+    <!-- ASCII Art -->
     <pre class="special center">
 888                                      
 888                                      
@@ -32,12 +34,19 @@
 888  888  "Y88P"  888  888  888  "Y8888  
     </pre>
 
+    <!-- Animated GIF -->
+    <div style="margin: 20px 0;">
+      <img src="/images/image05.gif?v=1" alt="Bag of fish GIF" style="max-width: 100%; height: auto;">
+    </div>
+
+    <!-- Page Buttons -->
     <div class="page-buttons">
       <a href="/about-me" class="pagebutton">about me</a>
       <a href="/links" class="pagebutton">socials & links</a>
     </div>
 
-    <div class="comment-section">
+    <!-- Comment Section -->
+    <div class="comment-section" style="margin-top: 40px;">
       <h2>Comments</h2>
       <div id="giscus_container"></div>
 
