@@ -1,49 +1,121 @@
-/* Base */
+/* === Base layout === */
 body {
-  background: #000;
-  color: #fff;
-  font-family: "Georgia", "Times New Roman", serif;
-  margin: 0;
-  padding: 2rem;
-  line-height: 1.6;
+    background-color: #000;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    overflow-y: auto;
+    font-family: Arial, sans-serif;
+    color: #fff;
 }
 
-/* Links */
+/* === ASCII Art (title banners) === */
+pre.special {
+    color: #0f0; /* neon green for distinction */
+    font-family: monospace;
+    font-size: 13px;
+    line-height: 14pt;
+    text-align: center;
+    margin: 40px 0 20px;
+}
+
+/* === General Text (about me, socials, poems) === */
+pre {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 1.05rem;
+    line-height: 1.6;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    text-align: center;
+    margin: 30px auto;
+    max-width: 800px;
+    padding: 0 20px;
+    color: #fff;
+}
+
+/* === Links === */
 a {
-  color: #aaa;
-  text-decoration: none;
+    color: #b8b8b8;
+    text-decoration: none;
+    transition: color 0.2s ease;
 }
 a:hover {
-  color: #fff;
+    color: #949494;
 }
 
-/* ASCII art */
-pre.special {
-  font-family: "Courier New", monospace;
-  white-space: pre;
-  text-align: center;
-  font-size: 14px;
-  line-height: 1.2;
-  margin-bottom: 2rem;
-  color: #0f0; /* green glow look */
-}
-
-/* Poems */
-pre:not(.special) {
-  font-family: "Georgia", "Times New Roman", serif;
-  font-size: 1.1rem;
-  white-space: pre-wrap;   /* allow wrapping */
-  word-wrap: break-word;   /* long lines break */
-  text-align: center;      /* center poems */
-  margin: 2rem auto;
-  max-width: 700px;
-  line-height: 1.7;
-}
-
-/* Divider */
+/* === Dividers === */
 hr {
-  border: none;
-  border-top: 1px solid #333;
-  margin: 2rem auto;
-  width: 60%;
+    border: 1px solid #333;
+    margin: 30px auto;
+    width: 70%;
+}
+
+/* === Page buttons (if you add navigation) === */
+.pagebutton {
+    background-color: #1c1c1c;
+    border: none;
+    color: white;
+    padding: 12px 26px;
+    text-align: center;
+    display: inline-block;
+    font-size: 15px;
+    margin: 6px 4px;
+    border-radius: 6px;
+    font-family: Arial, sans-serif;
+    transition: background-color 0.3s;
+}
+.pagebutton:hover {
+    background-color: #333;
+    color: white;
+}
+.page-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    margin: 20px 0;
+    flex-wrap: wrap;
+}
+
+/* === Comment Section (optional) === */
+.comment-section {
+    margin-top: 40px;
+    background: #111;
+    padding: 20px;
+    border-radius: 8px;
+    width: 500px;
+    max-width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    box-sizing: border-box;
+}
+.comment {
+    background: #1c1c1c;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    white-space: pre-wrap;
+    word-break: break-word;
+}
+.comment strong {
+    color: #b8b8b8;
+}
+
+/* === Responsive for mobile === */
+@media (max-width: 600px) {
+    pre.special {
+        font-size: 11px;
+        line-height: 12pt;
+    }
+    pre {
+        font-size: 0.95rem;
+        line-height: 1.5;
+        padding: 0 10px;
+    }
+    .pagebutton {
+        padding: 10px 20px;
+        font-size: 14px;
+    }
+    hr {
+        width: 85%;
+    }
 }
