@@ -1,14 +1,16 @@
+/* Make the page cover the full viewport */
 html, body {
     height: 100%;
     margin: 0;
     padding: 0;
 }
 
+/* Full-page GIF background */
 body {
-    background-image: url("../images/lain.gif");
+    background-image: url("../images/lain.gif"); /* path relative to CSS file */
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
-    background-color: #000000;
-    background-size: contain;
+    background-size: cover; /* fills entire viewport */
+    background-color: #000000; /* fallback if GIF doesn't load */
 }
