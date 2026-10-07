@@ -1,0 +1,31 @@
+{
+  "files": {
+    "main.css": "./static/css/main.a15ba05e.css",
+    "main.js": "./static/js/main.6e63bab4.js",
+    "static/js/3.64fcc023.chunk.js": "./static/js/3.64fcc023.chunk.js",
+    "static/js/382.e3bb20c6.chunk.js": "./static/js/382.e3bb20c6.chunk.js",
+    "static/js/237.564c98a8.chunk.js": "./static/js/237.564c98a8.chunk.js",
+    "static/js/12.ecc30d21.chunk.js": "./static/js/12.ecc30d21.chunk.js",
+    "static/js/141.b00ff025.chunk.js": "./static/js/141.b00ff025.chunk.js",
+    "static/js/208.86e17f92.chunk.js": "./static/js/208.86e17f92.chunk.js",
+    "static/js/744.3c83d350.chunk.js": "./static/js/744.3c83d350.chunk.js",
+    "static/js/894.ee45bb63.chunk.js": "./static/js/894.ee45bb63.chunk.js",
+    "static/js/751.c5f9aa7f.chunk.js": "./static/js/751.c5f9aa7f.chunk.js",
+    "static/js/917.83cef236.chunk.js": "./static/js/917.83cef236.chunk.js",
+    "static/media/ort-wasm-simd-threaded.jsep.wasm": "./static/media/ort-wasm-simd-threaded.jsep.b02e3fb2583c4795d628.wasm",
+    "static/media/ort.bundle.min.mjs": "./static/media/ort.bundle.min.932020e0756de1f1ddff.mjs",
+    "static/media/error.wav": "./static/media/error.c8da1695dd177fc9e8ec.wav",
+    "static/media/narrator.ico": "./static/media/narrator.aeadcf16c506a1b17f3e.ico",
+    "static/media/user.png": "./static/media/user.69f7aa399a3060cddc4e.png",
+    "static/media/restart.ico": "./static/media/restart.dc491046c84e4c14e552.ico",
+    "static/media/all-programs.ico": "./static/media/all-programs.bcaf5973986a068c6a92.ico",
+    "static/media/restore.ico": "./static/media/restore.13115734763eedd58881.ico",
+    "static/media/smile.svg": "./static/media/smile.2f4a5b9c7cddad8f30a7370051109ff1.svg",
+    "index.html": "./index.html",
+    "static/media/find.svg": "./static/media/find.303b87f499358979b1c66a3da1584e67.svg"
+  },
+  "entrypoints": [
+    "static/css/main.a15ba05e.css",
+    "static/js/main.6e63bab4.js"
+  ]
+}
