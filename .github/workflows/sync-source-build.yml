@@ -1,0 +1,80 @@
+name: Sync compiled site from winXP source
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+  schedule:
+    - cron: "*/15 * * * *"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: sync-compiled-site
+  cancel-in-progress: false
+
+jobs:
+  build-and-publish:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out published site
+        uses: actions/checkout@v4
+        with:
+          ref: main
+
+      - name: Check out source repository
+        uses: actions/checkout@v4
+        with:
+          repository: bagoffish/winXP
+          ref: main
+          path: source
+
+      - name: Skip when source has not changed
+        id: source-check
+        shell: bash
+        run: |
+          SOURCE_SHA="$(git -C source rev-parse HEAD)"
+          echo "sha=$SOURCE_SHA" >> "$GITHUB_OUTPUT"
+          if [ -f site-source-commit.txt ] && [ "$(tr -d '\r\n' < site-source-commit.txt)" = "$SOURCE_SHA" ]; then
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+            echo "Source is unchanged at $SOURCE_SHA; no build needed."
+          else
+            echo "changed=true" >> "$GITHUB_OUTPUT"
+            echo "Building source commit $SOURCE_SHA."
+          fi
+
+      - name: Set up Node.js
+        if: steps.source-check.outputs.changed == 'true'
+        uses: actions/setup-node@v4
+        with:
+          node-version-file: source/.nvmrc
+          cache: yarn
+          cache-dependency-path: source/yarn.lock
+
+      - name: Install dependencies and build
+        if: steps.source-check.outputs.changed == 'true'
+        working-directory: source
+        env:
+          CI: "false"
+          NODE_OPTIONS: --max_old_space_size=4096
+        run: |
+          corepack enable
+          yarn install --frozen-lockfile
+          yarn build
+
+      - name: Publish compiled files while preserving avatar history
+        if: steps.source-check.outputs.changed == 'true'
+        shell: bash
+        run: |
+          rsync -a source/build/ ./ --exclude='.git/'
+          printf '%s\n' '${{ steps.source-check.outputs.sha }}' > site-source-commit.txt
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          if git diff --cached --quiet; then
+            echo "Build produced no file changes."
+          else
+            git commit -m "Build site from winXP source ${{ steps.source-check.outputs.sha }}"
+            git push origin HEAD:main
+          fi
