@@ -5,7 +5,7 @@ on:
     branches: [main]
   workflow_dispatch:
   schedule:
-    - cron: "*/15 * * * *"
+    - cron: "17 * * * *"
 
 permissions:
   contents: write
@@ -23,15 +23,31 @@ jobs:
         with:
           ref: main
 
-      - name: Check out source repository
+      - name: Check for the private source token
+        id: token-check
+        shell: bash
+        env:
+          SOURCE_TOKEN: ${{ secrets.WINXP_SOURCE_TOKEN }}
+        run: |
+          if [ -n "$SOURCE_TOKEN" ]; then
+            echo "available=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "available=false" >> "$GITHUB_OUTPUT"
+            echo "::notice::Add a repository Actions secret named WINXP_SOURCE_TOKEN with read access to bagoffish/winXP, then run this workflow again."
+          fi
+
+      - name: Check out private source repository
+        if: steps.token-check.outputs.available == 'true'
         uses: actions/checkout@v4
         with:
           repository: bagoffish/winXP
           ref: main
           path: source
+          token: ${{ secrets.WINXP_SOURCE_TOKEN }}
 
       - name: Skip when source has not changed
         id: source-check
+        if: steps.token-check.outputs.available == 'true'
         shell: bash
         run: |
           SOURCE_SHA="$(git -C source rev-parse HEAD)"
