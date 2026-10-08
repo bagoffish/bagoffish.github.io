@@ -1,31 +1,33 @@
 {
   "files": {
-    "main.css": "./static/css/main.a15ba05e.css",
-    "main.js": "./static/js/main.dfbf33f7.js",
-    "static/js/3.ddf7b884.chunk.js": "./static/js/3.ddf7b884.chunk.js",
-    "static/js/382.e3bb20c6.chunk.js": "./static/js/382.e3bb20c6.chunk.js",
-    "static/js/237.564c98a8.chunk.js": "./static/js/237.564c98a8.chunk.js",
-    "static/js/144.db2d7c0a.chunk.js": "./static/js/144.db2d7c0a.chunk.js",
-    "static/js/141.e621c22f.chunk.js": "./static/js/141.e621c22f.chunk.js",
-    "static/js/208.86e17f92.chunk.js": "./static/js/208.86e17f92.chunk.js",
-    "static/js/744.3c83d350.chunk.js": "./static/js/744.3c83d350.chunk.js",
-    "static/js/894.ee45bb63.chunk.js": "./static/js/894.ee45bb63.chunk.js",
-    "static/js/751.c5f9aa7f.chunk.js": "./static/js/751.c5f9aa7f.chunk.js",
-    "static/js/917.83cef236.chunk.js": "./static/js/917.83cef236.chunk.js",
-    "static/media/ort-wasm-simd-threaded.jsep.wasm": "./static/media/ort-wasm-simd-threaded.jsep.b02e3fb2583c4795d628.wasm",
-    "static/media/ort.bundle.min.mjs": "./static/media/ort.bundle.min.cec936462caac9df719b.mjs",
+    "main.css": "./static/css/main.f012863c.css",
+    "main.js": "./static/js/main.d8a53b50.js",
+    "static/js/796.87bfe3b0.chunk.js": "./static/js/796.87bfe3b0.chunk.js",
+    "static/js/896.3a2cb27b.chunk.js": "./static/js/896.3a2cb27b.chunk.js",
+    "static/js/705.fd97a8b9.chunk.js": "./static/js/705.fd97a8b9.chunk.js",
+    "static/js/288.12d3268b.chunk.js": "./static/js/288.12d3268b.chunk.js",
+    "static/js/874.7fb53902.chunk.js": "./static/js/874.7fb53902.chunk.js",
+    "static/js/165.b239e4a1.chunk.js": "./static/js/165.b239e4a1.chunk.js",
     "static/media/error.wav": "./static/media/error.c8da1695dd177fc9e8ec.wav",
     "static/media/narrator.ico": "./static/media/narrator.aeadcf16c506a1b17f3e.ico",
     "static/media/user.png": "./static/media/user.69f7aa399a3060cddc4e.png",
     "static/media/restart.ico": "./static/media/restart.dc491046c84e4c14e552.ico",
     "static/media/all-programs.ico": "./static/media/all-programs.bcaf5973986a068c6a92.ico",
     "static/media/restore.ico": "./static/media/restore.13115734763eedd58881.ico",
-    "static/media/smile.svg": "./static/media/smile.2f4a5b9c7cddad8f30a7370051109ff1.svg",
+    "static/media/smile.svg": "./static/media/smile.45b54b9d335aea400da0859475daa434.svg",
     "index.html": "./index.html",
-    "static/media/find.svg": "./static/media/find.303b87f499358979b1c66a3da1584e67.svg"
+    "static/media/find.svg": "./static/media/find.303b87f499358979b1c66a3da1584e67.svg",
+    "main.f012863c.css.map": "./static/css/main.f012863c.css.map",
+    "main.d8a53b50.js.map": "./static/js/main.d8a53b50.js.map",
+    "796.87bfe3b0.chunk.js.map": "./static/js/796.87bfe3b0.chunk.js.map",
+    "896.3a2cb27b.chunk.js.map": "./static/js/896.3a2cb27b.chunk.js.map",
+    "705.fd97a8b9.chunk.js.map": "./static/js/705.fd97a8b9.chunk.js.map",
+    "288.12d3268b.chunk.js.map": "./static/js/288.12d3268b.chunk.js.map",
+    "874.7fb53902.chunk.js.map": "./static/js/874.7fb53902.chunk.js.map",
+    "165.b239e4a1.chunk.js.map": "./static/js/165.b239e4a1.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.a15ba05e.css",
-    "static/js/main.dfbf33f7.js"
+    "static/css/main.f012863c.css",
+    "static/js/main.d8a53b50.js"
   ]
 }
