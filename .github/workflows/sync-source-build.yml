@@ -1,4 +1,5 @@
 name: Sync compiled site from winXP source
+# Source labels are synced from winXP/main on this run.
 # Rebuild the published site from the latest private source on every push.
 
 on:
