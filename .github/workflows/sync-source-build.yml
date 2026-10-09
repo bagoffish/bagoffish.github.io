@@ -1,4 +1,5 @@
 name: Sync compiled site from winXP source
+# Rebuild the published site from the latest private source on every push.
 
 on:
   push:
