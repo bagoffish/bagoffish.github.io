@@ -1,5 +1,5 @@
 name: Sync compiled site from winXP source
-# Bloxify orchestration now preserves source note lengths and phrase dynamics.
+# Bloxify piano roll only: remove the alternate note-list view.
 # Rebuild the published site from the latest private source on every push.
 
 on:
