@@ -1,6 +1,6 @@
 name: Sync compiled site from winXP source
 # Bloxify piano roll only: remove the alternate note-list view.
-# Rebuild the published site from the latest private source on every push.
+# Rebuild the published site from latest winXP source, including Bloxify and public/audios.
 
 on:
   push:
