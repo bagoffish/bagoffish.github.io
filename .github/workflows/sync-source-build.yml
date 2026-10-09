@@ -1,5 +1,5 @@
 name: Sync compiled site from winXP source
-# Source labels are synced from winXP/main on this run.
+# Bloxify orchestration now preserves source note lengths and phrase dynamics.
 # Rebuild the published site from the latest private source on every push.
 
 on:
