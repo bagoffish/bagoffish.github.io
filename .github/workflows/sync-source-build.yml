@@ -1,5 +1,5 @@
 name: Sync compiled site from winXP source
-# Bloxify piano roll only: remove the alternate note-list view.
+# Bloxify WAV layering: use the latest source with MULE instrument and percussion samples.
 # Rebuild the published site from latest winXP source, including Bloxify, public/audios, and active backend URLs.
 
 on:
