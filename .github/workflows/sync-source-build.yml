@@ -1,5 +1,5 @@
 name: Sync compiled site from winXP source
-# Bloxify mix: prioritize source notes and remove forced sample loops.
+# Bloxify mix: preserve quick lead notes while removing forced sample loops.
 # Rebuild the published site from latest winXP source, including Bloxify, public/audios, and active backend URLs.
 
 on:
