@@ -1,5 +1,5 @@
 name: Sync compiled site from winXP source
-# Bloxify mix: preserve quick lead notes while removing forced sample loops.
+# Bloxify mix: track melody continuously when assigning instruments.
 # Rebuild the published site from latest winXP source, including Bloxify, public/audios, and active backend URLs.
 
 on:
