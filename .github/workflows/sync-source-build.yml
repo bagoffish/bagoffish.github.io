@@ -1,3 +1,4 @@
+# 2026-10-10: rebuild after adaptive Coy speech bubble placement and edge-aware tail (source f376d2c5b489558fde0857b60657e56606a94ed9).
 # 2026-10-10: rebuild after Coy speech bubble sizing, timed dismissal, and click-to-dismiss (source b72750e07cadbfe09e10b4df5774695d837279df).
 # 2026-10-10: rebuild after Coy current slang/personality update (source 2cfb740375c139f315a20ecefad85e840380a275).
 # 2026-10-10: rebuild after Coy chatbot reply borders changed to black (source 86c51c906609fb82d2517e180c73ff5673d226fa).
