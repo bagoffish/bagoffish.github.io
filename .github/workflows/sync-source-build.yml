@@ -152,3 +152,5 @@ jobs:
 # 2026-10-10: remove Coy speech bubble and include browser-local time context.
 
 # 2026-10-10: use Coy's random greeting inside chatbot too.
+
+# 2026-10-10: randomize app interaction speech and make Coy's speech bubble clickable to dismiss.
