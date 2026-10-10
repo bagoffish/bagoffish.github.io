@@ -157,3 +157,4 @@ jobs:
 # 2026-10-10: capitalize Coy replies and speech bubbles; allow period-free single-sentence chat.
 # 2026-10-10: auto-dismiss Coy speech bubbles after three seconds and support dragging Coy around the viewport.
 # 2026-10-10: ensure drag release doesn't trigger the chat click.
+# 2026-10-10: scale Coy speech bubble auto-dismiss delay to the message length.
