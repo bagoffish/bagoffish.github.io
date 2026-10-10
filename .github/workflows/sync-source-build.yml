@@ -1,6 +1,7 @@
 name: Sync compiled site from winXP source
 # 2026-10-10: rebuild latest Coy upload, taskbar-placement, and natural-expression source fixes.
 # 2026-10-10: include attachment retry preservation and readable text/code file support.
+# 2026-10-10: rebuild after Coy sprite was halved, Roblox lookup quips were corrected, and secondary AI provider keys were added.
 # 2026-10-10: remove Coy drag tooltip and chat log footer.
 # 2026-10-10: square > send button matching + and / shortcut to open Coy chat.
 # 2026-10-10: rebuild latest Coy fixes: taskbar clearance, desktop z-index, multi-bubble replies, and Cotto label cleanup (source 7202c3dcad10d9e3b8684d70a3f0ca17f2db659d).
