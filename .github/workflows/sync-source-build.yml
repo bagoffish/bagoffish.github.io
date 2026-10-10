@@ -1,4 +1,5 @@
 name: Sync compiled site from winXP source
+# 2026-10-10: rebuild for double-click-only Coy headpats and prompt-injection resistance.
 # 2026-10-10: rebuild for Coy's stable taskbar alignment and bubble-position fix.
 # 2026-10-10: rebuild after keeping Coy fully inside the viewport on load and resize.
 # 2026-10-10: rebuild for Coy's smoother drag handling and square + attachment button.
