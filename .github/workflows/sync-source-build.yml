@@ -118,7 +118,7 @@ jobs:
           test "$(tr -d '\r\n' < site-source-commit.txt)" = '${{ steps.source-check.outputs.sha }}' || { echo "::error::Published source SHA does not match checked-out source"; exit 1; }
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          # The private source checkout is a nested repository used only to build.
+          # The private source checkout is a nested repository used only to build Coy companion updates.
           # Never stage it as a submodule pointer in the public site repository.
           git add -A -- . ':(exclude)source'
           if git diff --cached --quiet; then
