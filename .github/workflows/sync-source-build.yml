@@ -133,3 +133,5 @@ jobs:
 # 2026-10-10: use the standard site window frame and close control for Coy.
 
 # 2026-10-10: position Coy above the taskbar.
+
+# 2026-10-10: remove Coy speech bubble and include browser-local time context.
