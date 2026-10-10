@@ -131,3 +131,5 @@ jobs:
           fi
 # 2026-10-10: use randomized casual Coy greetings instead of image-found wording.
 # 2026-10-10: use the standard site window frame and close control for Coy.
+
+# 2026-10-10: position Coy above the taskbar.
