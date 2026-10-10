@@ -1,4 +1,5 @@
 name: Sync compiled site from winXP source
+# 2026-10-10: rebuild after fixing Coy's total visitor-count intent detection.
 # 2026-10-10: rebuild for persistent greeting transcript and Typing... label.
 # 2026-10-10: include desktop full-tab visibility condition in Coy rebuild.
 # 2026-10-10: rebuild after Coy desktop drag, pat, full-tab visibility, image-copy, and upload syntax fixes.
