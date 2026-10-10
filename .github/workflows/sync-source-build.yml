@@ -1,4 +1,5 @@
 name: Sync compiled site from winXP source
+# 2026-10-10: restore original chat bubbles and style only Coy's floating speech bubble like classic Roblox (source 883685f085fc00c8214ee760e008d64d002faa03).
 # 2026-10-10: rebuild after Coy's classic Roblox-style chat bubble update (source 7368b3fedddcb78c9984fb9974a6cc0eea81c74e).
 # 2026-10-10: rebuild latest source including Winter Letter icon/order and Coy chat fixes.
 # 2026-10-10: rebuild latest Coy upload, taskbar-placement, and natural-expression source fixes.
