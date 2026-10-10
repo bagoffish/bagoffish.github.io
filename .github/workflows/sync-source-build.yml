@@ -1,4 +1,5 @@
 name: Sync compiled site from winXP source
+# 2026-10-10: rebuild after Coy desktop drag, pat, full-tab visibility, image-copy, and upload syntax fixes.
 # 2026-10-10: rebuild after Coy dragging fix in private winXP source.
 # Bloxify mix: track melody continuously when assigning instruments.
 # Rebuild the published site from latest winXP source, including Bloxify, public/audios, active backend URLs, and Coy chatbot UI changes.
