@@ -1,3 +1,4 @@
+# 2026-10-10: increase Coy sprite size to 76px (source 05e5758b5ea68203d976be52b07747f77335bb9c).
 # 2026-10-10: improve speech-bubble tail alignment for short text and thicken gray outline (source 89c0bd9038a2b434ede618373dcc0a8f4f97ddef).
 # 2026-10-10: make Coy's floating speech bubble size naturally to its text (source c7db919350e9f85fa3eaf5455a4c62ae7476418e).
 # 2026-10-10: thicker Coy speech/chat borders and left/right message tails (source e25f579dbae2327b9fa51ae7fa587020f5c042cc).
