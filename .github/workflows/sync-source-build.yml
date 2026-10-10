@@ -1,4 +1,5 @@
 name: Sync compiled site from winXP source
+# 2026-10-10: remove Coy drag tooltip and chat log footer.
 # 2026-10-10: square > send button matching + and / shortcut to open Coy chat.
 # 2026-10-10: distinguish single-click chat from double-click headpat.
 # 2026-10-10: rebuild for double-click-only Coy headpats and prompt-injection resistance.
