@@ -159,3 +159,5 @@ jobs:
 # 2026-10-10: ensure drag release doesn't trigger the chat click.
 # 2026-10-10: scale Coy speech bubble auto-dismiss delay to the message length.
 # 2026-10-10: keep Coy's chat greeting independent of speech bubbles and retain history across close/reopen only.
+
+# 2026-10-10: rebuild after Coy persona, identity, and capitalization corrections.
