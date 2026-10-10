@@ -129,3 +129,4 @@ jobs:
             git commit -m "Build site from winXP source ${{ steps.source-check.outputs.sha }}"
             git push origin HEAD:main
           fi
+# 2026-10-10: use randomized casual Coy greetings instead of image-found wording.
