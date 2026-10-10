@@ -1,3 +1,4 @@
+# 2026-10-10: bump Coy's sprite to 60px (source a55ce6c153faae74c0d3ea7291eb621227bcc903).
 name: Sync compiled site from winXP source
 # 2026-10-10: match floating speech bubble to the exact 2010-2015 Roblox reference (source 4466265b1f456c1e9becb85005d48eae96c42e36).
 # 2026-10-10: restore original chat bubbles and style only Coy's floating speech bubble like classic Roblox (source 883685f085fc00c8214ee760e008d64d002faa03).
