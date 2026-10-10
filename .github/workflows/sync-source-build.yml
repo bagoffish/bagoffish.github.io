@@ -36,7 +36,8 @@ jobs:
             echo "available=true" >> "$GITHUB_OUTPUT"
           else
             echo "available=false" >> "$GITHUB_OUTPUT"
-            echo "::notice::Add a repository Actions secret named WINXP_SOURCE_TOKEN with read access to bagoffish/winXP, then run this workflow again."
+            echo "::error::Missing WINXP_SOURCE_TOKEN. Add a repository Actions secret with read access to bagoffish/winXP."
+            exit 1
           fi
 
       - name: Check out private source repository
@@ -83,12 +84,36 @@ jobs:
           yarn install --frozen-lockfile
           yarn build
 
+      - name: Verify compiled site assets
+        if: steps.source-check.outputs.changed == 'true'
+        working-directory: source
+        shell: bash
+        run: |
+          test -s build/index.html || { echo "::error::Build is missing index.html"; exit 1; }
+          test -s build/asset-manifest.json || { echo "::error::Build is missing asset-manifest.json"; exit 1; }
+          node <<'NODE'
+          const fs = require('fs');
+          const path = require('path');
+          const manifest = JSON.parse(fs.readFileSync('build/asset-manifest.json', 'utf8'));
+          const files = Object.values(manifest.files || {});
+          if (!files.length) throw new Error('Asset manifest contains no files');
+          const missing = files
+            .filter((file) => typeof file === 'string' && file.startsWith('./'))
+            .map((file) => file.slice(2))
+            .filter((file) => !fs.existsSync(path.join('build', file)));
+          if (missing.length) throw new Error('Missing built assets: ' + missing.join(', '));
+          console.log('Verified ' + files.length + ' compiled asset references.');
+          NODE
+
       - name: Publish compiled files while preserving avatar history
         if: steps.source-check.outputs.changed == 'true'
         shell: bash
         run: |
           rsync -a source/build/ ./ --exclude='.git/'
           printf '%s\n' '${{ steps.source-check.outputs.sha }}' > site-source-commit.txt
+          test -s index.html || { echo "::error::Published site is missing index.html"; exit 1; }
+          test -s asset-manifest.json || { echo "::error::Published site is missing asset-manifest.json"; exit 1; }
+          test "$(tr -d '\r\n' < site-source-commit.txt)" = '${{ steps.source-check.outputs.sha }}' || { echo "::error::Published source SHA does not match checked-out source"; exit 1; }
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           # The private source checkout is a nested repository used only to build.
