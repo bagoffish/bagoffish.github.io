@@ -111,6 +111,9 @@ jobs:
         run: |
           rsync -a source/build/ ./ --exclude='.git/'
           printf '%s\n' '${{ steps.source-check.outputs.sha }}' > site-source-commit.txt
+          test -s index.html || { echo "::error::Published site is missing index.html"; exit 1; }
+          test -s asset-manifest.json || { echo "::error::Published site is missing asset-manifest.json"; exit 1; }
+          test "$(tr -d '\\r\\n' < site-source-commit.txt)" = '${{ steps.source-check.outputs.sha }}' || { echo "::error::Published source SHA does not match checked-out source"; exit 1; }
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           # The private source checkout is a nested repository used only to build.
