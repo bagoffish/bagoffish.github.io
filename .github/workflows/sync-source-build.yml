@@ -1,3 +1,4 @@
+# 2026-10-10: render Coy at 50% of the source sprite width and follow Korean/English/Chinese/other-language reply rules (source 22bbc0f168e046d842d30036d3668193573a3774).
 # 2026-10-10: keep Coy interactive with other apps open, show pickup bubble while dragging, use 10% renderer avatar pickup chance, and refresh About Me visitor count (source 62f2efaa6097b858b94bfd25bc0c70b8a29f80aa).
 # 2026-10-10: fix Coy chat bubble tail/border color consistency and strip leaked safety/moderation diagnostic headers (source 2513e3d39a9773f4293e8b19f7aa54f422416c91).
 # 2026-10-10: show the same tailed floating speech bubble with 'Typing...' while Coy responds (source 03414ad583a15844827c20c8dcdf43323bf2c422).
