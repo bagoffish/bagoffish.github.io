@@ -1,3 +1,4 @@
+# 2026-10-10: rebuild after Coy quarter-size and centered speech-bubble update (source 53c65dbac91aa4870c48a5d99beb691cae3dc440).
 # 2026-10-10: widen Coy speech bubbles and add artist/music-artist/programmer persona (source 2a0c705e2de4d1eb4dc7c14fb42d221d1723cc6b).
 # 2026-10-10: render Coy at 50% of the source sprite width and follow Korean/English/Chinese/other-language reply rules (source 22bbc0f168e046d842d30036d3668193573a3774).
 # 2026-10-10: keep Coy interactive with other apps open, show pickup bubble while dragging, use 10% renderer avatar pickup chance, and refresh About Me visitor count (source 62f2efaa6097b858b94bfd25bc0c70b8a29f80aa).
