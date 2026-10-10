@@ -155,3 +155,4 @@ jobs:
 
 # 2026-10-10: randomize app interaction speech and make Coy's speech bubble clickable to dismiss.
 # 2026-10-10: capitalize Coy replies and speech bubbles; allow period-free single-sentence chat.
+# 2026-10-10: auto-dismiss Coy speech bubbles after three seconds and support dragging Coy around the viewport.
