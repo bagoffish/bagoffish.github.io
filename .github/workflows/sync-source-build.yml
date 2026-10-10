@@ -128,7 +128,16 @@ jobs:
             echo "Build produced no file changes."
           else
             git commit -m "Build site from winXP source ${{ steps.source-check.outputs.sha }}"
-            git push origin HEAD:main
+            # Another workflow or manual commit may update main during the build.
+            # Rebase and retry instead of failing on a non-fast-forward push.
+            for attempt in 1 2 3; do
+              git fetch origin main
+              git rebase origin/main || { git rebase --abort; echo "Rebase conflicted; retrying from the latest main."; git reset --mixed origin/main; git add -A -- . ':(exclude)source'; git commit -m "Build site from winXP source ${{ steps.source-check.outputs.sha }}"; }
+              if git push origin HEAD:main; then exit 0; fi
+              echo "Push attempt $attempt failed; retrying."
+            done
+            echo "::error::Could not publish after three attempts."
+            exit 1
           fi
 # 2026-10-10: use randomized casual Coy greetings instead of image-found wording.
 # 2026-10-10: use the standard site window frame and close control for Coy.
