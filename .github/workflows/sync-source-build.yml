@@ -6,6 +6,7 @@ name: Sync compiled site from winXP source
 # 2026-10-10: rebuild after Gemini backend and Coy integration fixes.
 # 2026-10-10: rebuild again after final Coy sprite sizing adjustment.
 # 2026-10-10: remove the Windows XP virus notification balloon.
+# 2026-10-10: rebuild Coy chat close behavior, greetings, and Roblox-style bubble polish.
 
 on:
   push:
