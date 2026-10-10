@@ -129,12 +129,16 @@ jobs:
           else
             git commit -m "Build site from winXP source ${{ steps.source-check.outputs.sha }}"
             # Another workflow or manual commit may update main during the build.
-            # Rebase and retry instead of failing on a non-fast-forward push.
+            # Rebase onto the newest main and retry a rejected push.
             for attempt in 1 2 3; do
               git fetch origin main
-              git rebase origin/main || { git rebase --abort; echo "Rebase conflicted; retrying from the latest main."; git reset --mixed origin/main; git add -A -- . ':(exclude)source'; git commit -m "Build site from winXP source ${{ steps.source-check.outputs.sha }}"; }
+              if ! git rebase origin/main; then
+                git rebase --abort
+                echo "::error::Could not rebase the built site onto main without conflicts."
+                exit 1
+              fi
               if git push origin HEAD:main; then exit 0; fi
-              echo "Push attempt $attempt failed; retrying."
+              echo "Push attempt $attempt failed; fetching the latest main and retrying."
             done
             echo "::error::Could not publish after three attempts."
             exit 1
